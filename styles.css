@@ -88,6 +88,12 @@ nav {
     border: 4px solid #03dac6;
 }
 
+/* Fading Text */
+.fade-text {
+    color: #03dac6; /* Different color for the changing words */
+    transition: opacity 0.5s ease-in-out;
+}
+
 /* About Section */
 .about-section, .projects-section, .contact-section {
     padding: 60px 20px;

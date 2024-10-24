@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Machine Learning student at BYU passionate about data science and machine learning.">
-    <title>Home | ML Student</title>
+    <title>Bradley Beeson | ML Student</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">ML Student</div>
+            <div class="logo">Bradley Beeson | ML Student</div>
             <ul class="nav-links">
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -21,7 +21,10 @@
 
     <section id="home" class="hero-section">
         <div class="hero-content">
-            <h1>Hello, I'm a Machine Learning Student</h1>
+            <h1>
+                Hello, I'm a 
+                <span class="fade-text" id="changing-text">Machine Learning Student</span>
+            </h1>
             <p>I am currently studying Machine Learning at Brigham Young University, where I am passionate about data science and machine learning. My goal is to apply cutting-edge techniques to solve real-world problems.</p>
             <a href="#about" class="cta">Learn More</a>
         </div>
@@ -42,11 +45,29 @@
 
     <section id="contact" class="contact-section">
         <h2>Contact</h2>
-        <p>You can reach me via email at: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+        <p>You can reach me via email at: <a href="mailto:bbeeson1@byu.edu">bbeeson1@byu.edu</a></p>
     </section>
 
     <footer>
         <p>&copy; 2024 ML Student. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for text fading effect -->
+    <script>
+        const words = ["Machine Learning Student", "Data Enthusiast", "AI Researcher"];
+        let index = 0;
+        const textElement = document.getElementById('changing-text');
+
+        function changeWord() {
+            index = (index + 1) % words.length;
+            textElement.style.opacity = 0; // fade out
+            setTimeout(() => {
+                textElement.textContent = words[index];
+                textElement.style.opacity = 1; // fade in
+            }, 500); // half-second fade out/in
+        }
+
+        setInterval(changeWord, 5000); // Change every 3 seconds
+    </script>
 </body>
 </html>
